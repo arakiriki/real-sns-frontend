@@ -1,5 +1,7 @@
 import React from 'react'
 import './Rightbar.css';
+import Online from '../online/Online';
+import { Users } from '../../dummydata' ;
 
 export default function Rightbar() {
   return (
@@ -14,13 +16,9 @@ export default function Rightbar() {
         <img src="./assets/ad.jpeg" alt="" className='eventImage' />
         <h4 className="rightbarTitle">オンラインの友達</h4>
         <ul className="rightbarFriendList">
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImageContainer">
-              <img src="./assets/person/1.jpeg" alt="" className='rightbarProfileImage'/>
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">arakiriki</span>
-          </li>
+          {Users.map((user) => (
+            <Online user={user} key={user.id} />    
+          ))}
         </ul>
         <div className="promotionTitle">プロモーション広告</div>
         <img src="./assets/promotion/promotion1.jpeg" alt=""  className='rightbarPromotionImage'/>

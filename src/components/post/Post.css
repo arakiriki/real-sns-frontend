@@ -16,6 +16,10 @@
   object-fit: cover;
 }
 
+.likeIcon {
+  cursor: pointer;
+}
+
 .postTop {
   display: flex;
   align-items: center;
