@@ -1,12 +1,18 @@
 import { Chat, Notifications, Search } from '@mui/icons-material'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "./Topbar.css"
 
 export default function topbar() {
+
+  const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER;
+
   return (
   <div className='topbarContainer'>
     <div className="topbarLeft">
-      <span className="logo">real-sns</span>
+      <Link to="/" style={{ textDecoration:'none', color:'black' }}>
+        <span className="logo">real-sns</span>
+      </Link>
     </div>
     <div className="topbarCenter">
       <div className="searchbar">
@@ -24,7 +30,7 @@ export default function topbar() {
           <Notifications />
           <span className="topbarIconBadge">1</span>
         </div>
-        <img src="/assets/person/1.jpeg" alt="" className='topbarImage'/>
+        <img src={ PUBLIC_FOLDER + "/person/1.jpeg"} alt="" className='topbarImage'/>
       </div>
     </div>
   </div>
