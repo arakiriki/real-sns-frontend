@@ -89,3 +89,43 @@
   color: grey;
   margin-top: -20px;
 }
+
+.rightbarTitle {
+  font-size: 18px;
+  font-weight: 550;
+  margin-bottom: 10px;
+}
+
+.rightbarInfo {
+  margin-bottom: 30px;
+}
+
+.rightbarInfokey {
+  font-weight: 500;
+  margin-right: 5px;
+  color: #555;
+}
+
+.rightbarFollowings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.rightbarFollowing {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.rightbarFollowingImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rightbarInfoItem {
+  margin-bottom: 10px;
+}
