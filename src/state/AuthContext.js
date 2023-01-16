@@ -1,0 +1,25 @@
+import { Children, createContext, useReducer } from "react";
+import AuthReducer from "./AuthReducer";
+
+//最初のユーザー状態を定義
+const initialState = {
+  user: null,
+  isFetcing: false,
+  erro: false,
+}
+
+//状態をグローバルに管理する
+export const AuthContext = createContext(initialState);
+
+export const AuthContextProvider = ({children}) => {
+  const [state, dispatch ] = useReducer(AuthReducer, initialState)
+  return <AuthContext.Provider value={{
+    user: state.user,
+    isFetcing: state.isFetcing,
+    error: state.error,
+    dispatch,
+  }}>
+    {children}
+  </AuthContext.Provider>
+}
+
