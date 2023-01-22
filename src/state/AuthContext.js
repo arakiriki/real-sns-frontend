@@ -4,8 +4,8 @@ import AuthReducer from "./AuthReducer";
 //最初のユーザー状態を定義
 const initialState = {
   user: null,
-  isFetcing: false,
-  erro: false,
+  isFetching: false,
+  error: false,
 }
 
 //状態をグローバルに管理する
@@ -15,7 +15,7 @@ export const AuthContextProvider = ({children}) => {
   const [state, dispatch ] = useReducer(AuthReducer, initialState)
   return <AuthContext.Provider value={{
     user: state.user,
-    isFetcing: state.isFetcing,
+    isFetching: state.isFetching,
     error: state.error,
     dispatch,
   }}>

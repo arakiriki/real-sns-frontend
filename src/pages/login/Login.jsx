@@ -11,6 +11,8 @@ export default function Login() {
   const password = useRef();
   const {user, isFetcing, error, dispatch} = useContext(AuthContext);
 
+  console.log(user);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     loginCall(
